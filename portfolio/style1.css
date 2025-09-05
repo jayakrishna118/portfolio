@@ -1,0 +1,208 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+}
+
+.menu-list-items {
+    margin: 0 1rem;
+}
+
+.links {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links:hover {
+    color: #ddd;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: #007BFF;
+    color: #fff;
+}
+
+.headings h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.headings h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.intro-buttons .btn {
+    padding: 0.5rem 1.5rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.intro-buttons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.portfolio {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.portfolio-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.my-col {
+    flex: 1;
+    padding: 1rem;
+}
+
+.port-card {
+    background-color: #f4f4f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.port-card .blue-text {
+    color: #007BFF;
+}
+
+.about {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.about-image img {
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.services {
+    background: #fff;
+    padding: 2rem;
+}
+
+.services-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.my-card .icon {
+    font-size: 3rem;
+    color: #007BFF;
+}
+
+.contact {
+    background: #f4f4f9;
+    padding: 2rem;
+}
+
+.contact-form-container,
+.contact-details {
+    margin-bottom: 1.5rem;
+}
+
+.form-controls {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.common-btn {
+    padding: 0.7rem 2rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer .footer-links i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.footer .footer-links:hover i {
+    color: #007BFF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar .menu-list {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hero {
+        flex-direction: column;
+    }
+    .about {
+        flex-direction: column;
+    }
+}

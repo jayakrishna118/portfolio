@@ -1,0 +1,224 @@
+/* 
+  Animations CSS File
+  Contains animations, transitions, and hover effects
+*/
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Staggered Animation for Children Elements */
+.stagger-animation > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Hover Effects for Various Elements */
+
+/* Project Card Image Zoom */
+.project-card .project-image {
+  overflow: hidden;
+}
+
+.project-card .project-image img {
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* Button Hover Effects */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.btn:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+/* Social Icons Hover */
+.social-icons a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Card Hover */
+.service-card {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-color);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform 0.5s ease;
+  border-radius: var(--border-radius-lg);
+}
+
+.service-card:hover::before {
+  transform: scaleY(1);
+  opacity: 0.05;
+}
+
+.service-card:hover .service-icon {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Navigation Link Hover Effect */
+.nav-links li a {
+  position: relative;
+}
+
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::before,
+.nav-links li a.active::before {
+  width: 100%;
+}
+
+/* Form Input Focus Animation */
+.form-group input,
+.form-group textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  transform: translateY(-2px);
+}
+
+/* Image Hover Effect */
+.about-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(74, 108, 247, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-image:hover::after {
+  opacity: 1;
+}
+
+/* Home Section Animation */
+.home-section .text-content h1,
+.home-section .text-content h2,
+.home-section .text-content p,
+.home-section .cta-buttons,
+.home-section .social-icons {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.home-section .text-content h1 { animation-delay: 0.2s; }
+.home-section .text-content h2 { animation-delay: 0.4s; }
+.home-section .text-content p { animation-delay: 0.6s; }
+.home-section .cta-buttons { animation-delay: 0.8s; }
+.home-section .social-icons { animation-delay: 1s; }
+
+.home-section .image-content {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Scroll Animation for Sections */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

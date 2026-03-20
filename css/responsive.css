@@ -197,7 +197,7 @@
   }
   
   .image-content {
-    height: 300px;
+    height: none;
   }
   
   .profile-image,

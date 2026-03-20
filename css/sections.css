@@ -40,9 +40,10 @@
   margin-bottom: var(--space-2);
 }
 
+
 .text-content h2 {
   font-size: 2rem;
-  color: #c1121f;
+  color: #e16207;
   margin-bottom: var(--space-3);
   font-weight: 600;
 }
@@ -94,7 +95,7 @@
   right: 0;
   top: 10%;
   transform: translateY(-50%);
-  background-image: url('C:\Users\dell\Downloads\jayakrishna-portfolio\images\jk.jpeg');
+  /* background-image: url('C:\Users\dell\Downloads\jayakrishna-portfolio\images\jk.jpeg'); */
   background-size: cover;
   background-position: center;
   border-radius: var(--border-radius-lg);
@@ -138,7 +139,7 @@
   transform: scale(1.05);
 }
 
-.experience-badge {
+/* .experience-badge {
   position: absolute;
   bottom: var(--space-4);
   right: var(--space-4);
@@ -161,7 +162,7 @@
 .experience-badge .text {
   font-size: 0.8rem;
   font-weight: 400;
-}
+} */
 
 .about-text h3 {
   font-size: 1.75rem;

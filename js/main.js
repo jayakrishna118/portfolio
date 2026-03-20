@@ -160,8 +160,13 @@ window.addEventListener('scroll', () => {
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! This is a demo form and does not actually send emails.');
-    contactForm.reset();
+    // Optionally show a loading indicator here
+    // Allow the form to submit to Web3Forms
+    // Show a success message after submission
+    contactForm.addEventListener('submit', function () {
+      setTimeout(() => {
+        alert('Thank you for your message! Your submission was successful.');
+      }, 500);
+    }, { once: true });
   });
 }
